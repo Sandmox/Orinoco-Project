@@ -66,7 +66,9 @@ fetch("http://localhost:3000/api/cameras")
 
 img1.addEventListener("click", event => {
     name1.textContent = "J'ai cliqué!"
-})
+});
+
+
 
 
 
