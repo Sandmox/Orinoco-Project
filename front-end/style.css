@@ -1,12 +1,9 @@
-h1{
-    color: rgb(231, 74, 12);
+h1 {
+  color: red;
 }
 
-img{
-    width: 200px;
+img {
+  width: 300px;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
+/*# sourceMappingURL=style.css.map */
