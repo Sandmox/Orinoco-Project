@@ -1,4 +1,4 @@
-const img1 = document.getElementById("img1");
+/*const img1 = document.getElementById("img1");
 const img2 = document.getElementById("img2");
 const img3 = document.getElementById("img3");
 const img4 = document.getElementById("img4");
@@ -66,11 +66,38 @@ fetch("http://localhost:3000/api/cameras")
 
 img1.addEventListener("click", event => {
     name1.textContent = "J'ai cliqué!"
-});
+});*/
+
+const cameras = [];
+console.log(cameras);
+const createCameras = (cameras) => {
+    const camerasWrapper = document.getElementById("cameras");
+    cameras[0].forEach(camera => {
+        /*var ghost = document.getElementById("ghost");*/
+        var cameraWrapper = ghost.cloneNode(true);
+        cameraWrapper.style = null;
+        /*cameraWrapper.classList = "camera";*/
+        var img = cameraWrapper.getElementsByTagName('img').item(0);
+        var nameCam = cameraWrapper.getElementsByTagName('h2').item(0);
+        img.setAttribute("src", camera.imageUrl);
+        nameCam.textContent = camera.name;
+        camerasWrapper.appendChild(cameraWrapper);
+    });
+};
+
+fetch("http://localhost:3000/api/cameras")
+.then(res => {
+    console.log(res);
+    if(res.ok){
+        res.json().then(data => {            
+            cameras.push(data);
+            createCameras(cameras);
+        })
+    } else {
+        console.log("ERREUR");
+    }
+})
 
 
 
 
-
-
-console.log("hello world");
