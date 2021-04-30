@@ -79,8 +79,10 @@ const createCameras = (cameras) => {
         /*cameraWrapper.classList = "camera";*/
         var img = cameraWrapper.getElementsByTagName('img').item(0);
         var nameCam = cameraWrapper.getElementsByTagName('h2').item(0);
+        var priceCam = cameraWrapper.getElementsByTagName('p').item(0);
         img.setAttribute("src", camera.imageUrl);
         nameCam.textContent = camera.name;
+        priceCam.textContent = camera.price;
         camerasWrapper.appendChild(cameraWrapper);
     });
 };
