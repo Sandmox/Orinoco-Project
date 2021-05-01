@@ -1,13 +1,27 @@
-const lense1a = document.getElementById("lense1a");
-const lense1b = document.getElementById("lense1b");
+const cameras = [];
+const createCameras = (cameras) => {
+    const camerasWrapper = document.getElementById("lenses");
+    cameras[0].forEach(camera => {
+        console.log(cameras[0][0].lenses);
+        var ghost = document.getElementById("ghost");
+        var cameraWrapper = ghost.cloneNode(true);
+        cameraWrapper.style = null;
+        cameraWrapper.classList = "camera";
+        var nameCam = cameraWrapper.getElementsByTagName('option').item(0);
+        nameCam.textContent = camera.lenses[0];
+        camerasWrapper.appendChild(cameraWrapper);
+    });
+};
+
+
 
 fetch("http://localhost:3000/api/cameras")
 .then(res => {
     console.log(res);
     if(res.ok){
         res.json().then(data => {
-            lense1a.textContent = data[0].lenses[0];
-            lense1b.textContent = data[0].lenses[1];
+            cameras.push(data);
+            createCameras(cameras);
         })
     } else {
         console.log("ERREUR");

@@ -69,14 +69,13 @@ img1.addEventListener("click", event => {
 });*/
 
 const cameras = [];
-console.log(cameras);
 const createCameras = (cameras) => {
     const camerasWrapper = document.getElementById("cameras");
     cameras[0].forEach(camera => {
-        /*var ghost = document.getElementById("ghost");*/
+        var ghost = document.getElementById("ghost");
         var cameraWrapper = ghost.cloneNode(true);
         cameraWrapper.style = null;
-        /*cameraWrapper.classList = "camera";*/
+        cameraWrapper.classList = "camera";
         var img = cameraWrapper.getElementsByTagName('img').item(0);
         var nameCam = cameraWrapper.getElementsByTagName('h2').item(0);
         var priceCam = cameraWrapper.getElementsByTagName('p').item(0);
@@ -100,6 +99,10 @@ fetch("http://localhost:3000/api/cameras")
     }
 })
 
+
+img1.addEventListener("click", event => {
+    
+})
 
 
 
