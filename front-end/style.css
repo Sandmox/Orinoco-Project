@@ -1,12 +1,8 @@
-img {
-  width: 300px;
-}
-
 .footer {
   background-color: #f3e9f1;
   display: flex;
   justify-content: center;
-  height: 120px;
+  height: 100px;
 }
 .footer ul {
   display: flex;
@@ -30,6 +26,9 @@ header {
   justify-content: start;
   align-items: center;
 }
+header img {
+  width: 300px;
+}
 header p {
   font-size: 32px;
   font-style: italic;
@@ -41,6 +40,23 @@ header p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+}
+#cameras img {
+  margin: 10px;
+  width: 300px;
+  height: 200px;
+}
+#cameras a {
+  text-decoration: none;
+}
+#cameras h2, #cameras p {
+  color: #4d2509;
+}
+
+h1 {
+  margin-left: 20px;
+  color: #301463;
 }
 
 /*# sourceMappingURL=style.css.map */
