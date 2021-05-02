@@ -24,6 +24,6 @@ app.use('/api/cameras', cameraRoutes);
 app.use('/api/teddies', teddyRoutes);
 app.use('/api/furniture', furnitureRoutes);
 
-app.get("/", (req, res) => res.send("hello world!!!"));
+app.get("/", (req, res) => res.send("hello world!"));
 
 module.exports = app;

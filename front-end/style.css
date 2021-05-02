@@ -1,9 +1,19 @@
-h1 {
-  color: #06a32d;
-}
-
 img {
   width: 300px;
+}
+
+.footer {
+  background-color: burlywood;
+  display: flex;
+  justify-content: center;
+}
+.footer ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-left: 0px;
+  width: 800px;
+  justify-content: space-around;
 }
 
 /*# sourceMappingURL=style.css.map */
