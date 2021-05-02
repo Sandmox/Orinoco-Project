@@ -3,9 +3,10 @@ img{
 }
 
 .footer{
-    background-color: burlywood;
+    background-color: #f3e9f1;
     display: flex;
     justify-content: center;
+    height: 120px;
     ul{
         display: flex;
         flex-direction: row;
@@ -13,5 +14,10 @@ img{
         padding-left: 0px;
         width: 800px;
         justify-content: space-around;
+        align-items: center;
+        li{
+            font-size: 25px;
+            color: #915cf6;
+        }
     }
 }
