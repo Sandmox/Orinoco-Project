@@ -51,6 +51,7 @@ ready(function() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const productId = urlParams.get('id');
+    const imgCamera = document.getElementById("imgCamera");
 
     if(productId !== "") {
         console.log(productId);
@@ -60,6 +61,7 @@ ready(function() {
                 if(res.ok){
                     res.json().then(data => {
                         createProduct(data);
+                        imgCamera.src = data.imageUrl;
                     })
                 } else {
                     console.log("ERREUR");
@@ -67,3 +69,5 @@ ready(function() {
         })
     }
 });
+
+

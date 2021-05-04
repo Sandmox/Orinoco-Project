@@ -80,7 +80,6 @@ const createCameras = (cameras) => {
         var nameCam = cameraWrapper.getElementsByTagName('h2').item(0);
         var priceCam = cameraWrapper.getElementsByTagName('p').item(0);
         var link = cameraWrapper.getElementsByTagName('a').item(0);
-        console.log(link);
         img.setAttribute("src", camera.imageUrl);
         var productId = camera._id;
         link.setAttribute("href", "./produit.html?id="+productId);
