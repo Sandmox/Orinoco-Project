@@ -42,10 +42,10 @@ function ready(callbackFunc) {
         });
     }
 }
+
 const createProduct = (product) => {
     console.log(product);
 };
-
 
 ready(function() {
     const queryString = window.location.search;
@@ -55,6 +55,7 @@ ready(function() {
     if(productId !== "") {
         fetch("http://localhost:3000/api/cameras/"+productId)
             .then(res => {
+                console.log(productId);
                 if(res.ok){
                     res.json().then(data => {
                         createProduct(data);

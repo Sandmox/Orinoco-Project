@@ -79,7 +79,13 @@ const createCameras = (cameras) => {
         var img = cameraWrapper.getElementsByTagName('img').item(0);
         var nameCam = cameraWrapper.getElementsByTagName('h2').item(0);
         var priceCam = cameraWrapper.getElementsByTagName('p').item(0);
+        var link = cameraWrapper.getElementsByTagName('a').item(0);
+        console.log(link);
         img.setAttribute("src", camera.imageUrl);
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const productId = urlParams.get('id');
+        link.setAttribute("href", "./produit.html?id="+productId);
         nameCam.textContent = camera.name;
         priceCam.textContent = camera.price;
         camerasWrapper.appendChild(cameraWrapper);
@@ -98,8 +104,6 @@ fetch("http://localhost:3000/api/cameras")
         console.log("ERREUR");
     }
 })
-
-
 
 
 
