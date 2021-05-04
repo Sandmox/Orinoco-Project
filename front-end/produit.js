@@ -53,6 +53,7 @@ ready(function() {
     const productId = urlParams.get('id');
 
     if(productId !== "") {
+        console.log(productId);
         fetch("http://localhost:3000/api/cameras/"+productId)
             .then(res => {
                 console.log(productId);
