@@ -55,6 +55,8 @@ ready(function() {
     const nameCamera = document.getElementById("nameCamera");
     const descriptionCamera = document.getElementById('descriptionCamera');
     const priceCamera = document.getElementById('priceCamera');
+    const lense1 = document.getElementById('lense1');
+    const lense2 = document.getElementById('lense2');
 
     if(productId !== "") {
         console.log(productId);
@@ -69,6 +71,8 @@ ready(function() {
                         nameCamera.textContent = data.name;
                         descriptionCamera.textContent = data.description;
                         priceCamera.textContent = data.price;
+                        lense1.textContent = data.lenses[0];
+                        lense2.textContent = data.lenses[1];
                     })
                 } else {
                     console.log("ERREUR");
