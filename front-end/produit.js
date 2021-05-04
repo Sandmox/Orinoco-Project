@@ -52,6 +52,9 @@ ready(function() {
     const urlParams = new URLSearchParams(queryString);
     const productId = urlParams.get('id');
     const imgCamera = document.getElementById("imgCamera");
+    const nameCamera = document.getElementById("nameCamera");
+    const descriptionCamera = document.getElementById('descriptionCamera');
+    const priceCamera = document.getElementById('priceCamera');
 
     if(productId !== "") {
         console.log(productId);
@@ -60,8 +63,12 @@ ready(function() {
                 console.log(productId);
                 if(res.ok){
                     res.json().then(data => {
+                        console.log(data);
                         createProduct(data);
                         imgCamera.src = data.imageUrl;
+                        nameCamera.textContent = data.name;
+                        descriptionCamera.textContent = data.description;
+                        priceCamera.textContent = data.price;
                     })
                 } else {
                     console.log("ERREUR");
