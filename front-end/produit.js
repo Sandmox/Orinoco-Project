@@ -58,6 +58,18 @@ ready(function() {
     const lense1 = document.getElementById('lense1');
     const lense2 = document.getElementById('lense2');
 
+    /*const lensesType = [];
+    const real_lenses = document.getElementById("real_lenses");
+    lensesType[0].forEach(lense => {
+        var ghost = document.getElementById("ghost");
+        var lenseWrapper = ghost.cloneNode(true);
+        lenseWrapper.style = null;
+        var option = document.getElementsByTagName('option').item(0);
+        lense.textContent = lense.lenses;
+        real_lenses.appendChild(lenseWrapper);
+    });*/
+
+
     if(productId !== "") {
         console.log(productId);
         fetch("http://localhost:3000/api/cameras/"+productId)
@@ -67,6 +79,7 @@ ready(function() {
                     res.json().then(data => {
                         console.log(data);
                         createProduct(data);
+                        /*lensesType.push(data);*/
                         imgCamera.src = data.imageUrl;
                         nameCamera.textContent = data.name;
                         descriptionCamera.textContent = data.description;
