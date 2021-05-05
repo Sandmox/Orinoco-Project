@@ -57,6 +57,7 @@ ready(function() {
     const priceCamera = document.getElementById('priceCamera');
     const lense1 = document.getElementById('lense1');
     const lense2 = document.getElementById('lense2');
+    let lenseTest = document.getElementsByTagName("option").item(0);
 
     /*const lensesType = [];
     const real_lenses = document.getElementById("real_lenses");
@@ -77,15 +78,18 @@ ready(function() {
                 console.log(productId);
                 if(res.ok){
                     res.json().then(data => {
-                        console.log(data);
+                        console.log(data.lenses);
                         createProduct(data);
-                        /*lensesType.push(data);*/
                         imgCamera.src = data.imageUrl;
                         nameCamera.textContent = data.name;
                         descriptionCamera.textContent = data.description;
                         priceCamera.textContent = data.price;
-                        lense1.textContent = data.lenses[0];
-                        lense2.textContent = data.lenses[1];
+
+                        data.lenses.forEach(lense => {
+                            console.log(lense);
+                            console.log(data.lenses);
+                            lenseTest.textContent = lense;
+                        });
                     })
                 } else {
                     console.log("ERREUR");
