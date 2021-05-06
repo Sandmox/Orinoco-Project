@@ -43,33 +43,32 @@ function ready(callbackFunc) {
     }
 }
 
-const createProduct = (product) => {
-    console.log(product);
-};
+
 
 ready(function() {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const productId = urlParams.get('id');
-    const imgCamera = document.getElementById("imgCamera");
-    const nameCamera = document.getElementById("nameCamera");
-    const descriptionCamera = document.getElementById('descriptionCamera');
-    const priceCamera = document.getElementById('priceCamera');
-    const lense1 = document.getElementById('lense1');
-    const lense2 = document.getElementById('lense2');
-    let lenseTest = document.getElementsByTagName("option").item(0);
+    
+    const createProduct = (data) => {
+        console.log(data);
+        const imgCamera = document.getElementById("imgCamera");
+        const nameCamera = document.getElementById("nameCamera");
+        const descriptionCamera = document.getElementById('descriptionCamera');
+        const priceCamera = document.getElementById('priceCamera');
+        const wrapperLenses = document.getElementById("wrapperLences");
 
-    /*const lensesType = [];
-    const real_lenses = document.getElementById("real_lenses");
-    lensesType[0].forEach(lense => {
-        var ghost = document.getElementById("ghost");
-        var lenseWrapper = ghost.cloneNode(true);
-        lenseWrapper.style = null;
-        var option = document.getElementsByTagName('option').item(0);
-        lense.textContent = lense.lenses;
-        real_lenses.appendChild(lenseWrapper);
-    });*/
+        imgCamera.src = data.imageUrl;
+        nameCamera.textContent = data.name;
+        descriptionCamera.textContent = data.description;
+        priceCamera.textContent = data.price;
 
+        data.lenses.forEach(lense => {
+            const option = document.createElement('option');
+            option.textContent = lense;
+            wrapperLenses.appendChild(option);                
+        });
+    };
 
     if(productId !== "") {
         console.log(productId);
@@ -79,17 +78,7 @@ ready(function() {
                 if(res.ok){
                     res.json().then(data => {
                         console.log(data.lenses);
-                        createProduct(data);
-                        imgCamera.src = data.imageUrl;
-                        nameCamera.textContent = data.name;
-                        descriptionCamera.textContent = data.description;
-                        priceCamera.textContent = data.price;
-
-                        data.lenses.forEach(lense => {
-                            console.log(lense);
-                            console.log(data.lenses);
-                            lenseTest.textContent = lense;
-                        });
+                        createProduct(data);  
                     })
                 } else {
                     console.log("ERREUR");
