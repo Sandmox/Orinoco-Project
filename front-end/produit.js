@@ -1,31 +1,3 @@
-/*let ids = [];
-console.log(window.location);
-
-for (let i = 0; i < ids.length; i++){
-    console.log(ids[0][i]._id);
-};
-
-const createIds = (ids) => {
-    ids[0].forEach(id => {
-        console.log(ids[0][0]._id);
-    });
-}
-
-
-fetch("http://localhost:3000/api/cameras")
-.then(res => {
-    console.log(res);
-    if(res.ok){
-        res.json().then(data => {
-        ids.push(data);
-        createIds(ids);
-        console.log(data[0]._id);
-        })
-    } else {
-        console.log("ERREUR");
-    }
-})*/
-
 function ready(callbackFunc) {
     if (document.readyState !== 'loading') {
         // Document is already ready, call the callback directly
@@ -42,8 +14,6 @@ function ready(callbackFunc) {
         });
     }
 }
-
-
 
 ready(function() {
     const queryString = window.location.search;
@@ -87,4 +57,5 @@ ready(function() {
     }
 });
 
+localStorage.setItem('monChat', 'Tom');
 
