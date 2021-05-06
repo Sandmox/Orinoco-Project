@@ -38,6 +38,14 @@ ready(function() {
             option.textContent = lense;
             wrapperLenses.appendChild(option);                
         });
+
+        const basket = document.getElementById("basketButton");
+        basket.addEventListener("click", () => {
+            localStorage.setItem('order', JSON.stringify(data));
+            
+            
+        }, false);
+
     };
 
     if(productId !== "") {
@@ -57,5 +65,6 @@ ready(function() {
     }
 });
 
-localStorage.setItem('monChat', 'Tom');
+
+
 
