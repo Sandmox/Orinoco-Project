@@ -27,6 +27,7 @@ ready(function() {
         const descriptionCamera = document.getElementById('descriptionCamera');
         const priceCamera = document.getElementById('priceCamera');
         const wrapperLenses = document.getElementById("wrapperLences");
+        
 
         imgCamera.src = data.imageUrl;
         nameCamera.textContent = data.name;
@@ -42,7 +43,6 @@ ready(function() {
         const basket = document.getElementById("basketButton");
         basket.addEventListener("click", () => {
             localStorage.setItem('order', JSON.stringify(data));
-            
             
         }, false);
 
