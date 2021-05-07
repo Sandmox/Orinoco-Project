@@ -27,6 +27,7 @@ ready(function() {
         const descriptionCamera = document.getElementById('descriptionCamera');
         const priceCamera = document.getElementById('priceCamera');
         const wrapperLenses = document.getElementById("wrapperLences");
+        const test = document.getElementsByTagName("i").item(0);
         
 
         imgCamera.src = data.imageUrl;
@@ -40,11 +41,13 @@ ready(function() {
             wrapperLenses.appendChild(option);                
         });
 
+        var x = 1;
         const basket = document.getElementById("basketButton");
         basket.addEventListener("click", () => {
             localStorage.setItem('order', JSON.stringify(data));
-            
-        }, false);
+            test.textContent = x;
+            x++;
+            },false);        
 
     };
 
