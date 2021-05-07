@@ -44,7 +44,7 @@ ready(function() {
         var x = 1;
         const basket = document.getElementById("basketButton");
         basket.addEventListener("click", () => {
-            localStorage.setItem('order', JSON.stringify(data));
+            localStorage.setItem(JSON.stringify(data.name), JSON.stringify(data));
             test.textContent = x;
             x++;
             },false);        
