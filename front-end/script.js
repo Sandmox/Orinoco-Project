@@ -23,7 +23,8 @@ fetch("http://localhost:3000/api/cameras")
 .then(res => {
     console.log(res);
     if(res.ok){
-        res.json().then(data => {            
+        res.json().then(data => {  
+            console.log(data);          
             cameras.push(data);
             createCameras(cameras);
         })
