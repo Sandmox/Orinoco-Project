@@ -27,12 +27,12 @@ fetch("http://localhost:3000/api/cameras")
             console.log(data);          
             cameras.push(data);
             createCameras(cameras);
+            getBasket();
         })
     } else {
         console.log("ERREUR");
     }
 })
-
 
 
 

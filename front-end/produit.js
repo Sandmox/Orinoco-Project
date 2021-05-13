@@ -44,17 +44,19 @@ ready(function() {
         //Incrémenter le nombre de produits ajoutés au panier
         var x = 1;
         const addBasket = document.getElementById("addBasketButton");
-        let monobjet  = [];
-
-        function saveCart(cartArticles) {
-            localStorage.setItem('orders', JSON.stringify(cartArticles));
-        }
         
+        let basket = JSON.parse(localStorage.getItem('basket'));
+        console.log(basket);
+        if (basket === null){
+            basket = [];
+        }
         //localStorage.setItem('orders', monobjet_json);
         
         addBasket.addEventListener("click", () => {
-            monobjet.push(data);
-            console.log(monobjet);
+            basket.push(data);
+            console.log(basket);
+            localStorage.setItem('basket', JSON.stringify(basket));
+            basket = JSON.parse(localStorage.getItem('basket'));
             /*localStorage.setItem(JSON.stringify("camera"), JSON.stringify(data));
             let monobjet = localStorage.getItem('\"camera\"');
             console.log(localStorage);
@@ -64,18 +66,7 @@ ready(function() {
             console.log(monObjet.price);*/
             numberOfProducts.textContent = x;
             x++;
-            },false);    
-            
-        const goToBasket = document.getElementById("goToBasketButton");
-        goToBasket.addEventListener("click", () => {
-            let monobjet_json = JSON.stringify(monobjet);
-            localStorage.setItem('orders', monobjet_json);
-            console.log(localStorage);
-            console.log(monobjet);
-
-            //saveCart(data);
-            
-            });  
+            },false);   
     };
 
     

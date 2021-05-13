@@ -1,9 +1,9 @@
 // Vider le panier & retour à la page d'accueil
-const emptyBasket = document.getElementById('emptyBasket');
+/*const emptyBasket = document.getElementById('emptyBasket');
 emptyBasket.addEventListener("click", () => {
     localStorage.clear();
     window.location = "file:///Users/Alex/Desktop/Orinoco/front-end/index.html"
-}, false);
+}, false);*/
 
 fetch("http://localhost:3000/api/cameras")
 .then(res => {
