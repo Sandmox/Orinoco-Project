@@ -53,6 +53,7 @@ ready(function() {
         //localStorage.setItem('orders', monobjet_json);
         
         addBasket.addEventListener("click", () => {
+            //addToBasket();
             basket.push(data);
             localStorage.setItem('basket', JSON.stringify(basket));
             basket = JSON.parse(localStorage.getItem('basket'));
