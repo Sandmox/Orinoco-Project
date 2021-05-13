@@ -54,9 +54,9 @@ ready(function() {
         
         addBasket.addEventListener("click", () => {
             basket.push(data);
-            console.log(basket);
             localStorage.setItem('basket', JSON.stringify(basket));
             basket = JSON.parse(localStorage.getItem('basket'));
+            countBasket();
             /*localStorage.setItem(JSON.stringify("camera"), JSON.stringify(data));
             let monobjet = localStorage.getItem('\"camera\"');
             console.log(localStorage);
@@ -64,8 +64,9 @@ ready(function() {
             let monObjet = JSON.parse(monobjet);
             console.log(monObjet);
             console.log(monObjet.price);*/
-            numberOfProducts.textContent = x;
-            x++;
+
+            //numberOfProducts.textContent = x;
+            //x++;
             },false);   
     };
 
@@ -78,6 +79,7 @@ ready(function() {
                 if(res.ok){
                     res.json().then(data => {
                         createProduct(data); 
+                        countBasket();
                     })
                 } else {
                     console.log("ERREUR");
