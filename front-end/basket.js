@@ -32,8 +32,8 @@ function retrieveCameras () {
     console.log(monobjet);
     let monObjet = JSON.parse(monobjet);
     console.log(monObjet);
-    console.log(localStorage.key(0));
-    console.log(monObjet[1]);
+    //console.log(localStorage.key(0));
+    //console.log(monObjet[1]);
     monObjet.forEach(element => {
         const camerasWrapper = document.getElementById("cameras2");
         var ghost2 = document.getElementById("ghost2");
@@ -50,5 +50,13 @@ function retrieveCameras () {
         priceCam.textContent = element.price;
         camerasWrapper.appendChild(cameraWrapper);
     });
+}
+
+// Vider le panier & retour à la page d'accueil
+function clearBasket (){
+    const emptyBasket = document.getElementById('emptyBasket');
+    emptyBasket.addEventListener("click", () => {
+    localStorage.clear();
+}, false);
 }
             
