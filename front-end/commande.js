@@ -14,4 +14,20 @@ function displayTotalPrice () {
 
 displayTotalPrice();
 
+// Afficher l'identifiant de commande 
+
+function orderNumber () {
+    const alphabet = "abcdefghijklmnopqrstuvwxyz"
+    const randomCharacter = alphabet[Math.floor(Math.random() * alphabet.length)]
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    const randomCharacter2 = alphabet[Math.floor(Math.random() * alphabet.length)]
+    const randomNumber2 = Math.floor(Math.random() * 1000) + 1;
+    const orderId = document.getElementById("orderId");
+    orderId.textContent = randomCharacter + "-" + randomNumber + "-" + randomCharacter2 + "-" + randomNumber2;
+};
+
+orderNumber();
+
+
+
 

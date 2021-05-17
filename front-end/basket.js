@@ -29,11 +29,7 @@ function countBasket(){
 
 function retrieveCameras () {
     let monobjet = localStorage.getItem('basket');
-    console.log(monobjet);
     let monObjet = JSON.parse(monobjet);
-    console.log(monObjet);
-    //console.log(localStorage.key(0));
-    //console.log(monObjet[1]);
     monObjet.forEach(element => {
         const camerasWrapper = document.getElementById("cameras2");
         var ghost2 = document.getElementById("ghost2");
@@ -52,7 +48,7 @@ function retrieveCameras () {
     });
 }
 
-// Vider le panier & retour à la page d'accueil
+// Vider le panier
 function clearBasket (){
     const emptyBasket = document.getElementById('emptyBasket');
     emptyBasket.addEventListener("click", () => {

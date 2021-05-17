@@ -21,7 +21,6 @@ ready(function() {
     const productId = urlParams.get('id');
     
     const createProduct = (data) => {
-        console.log(data);
         const imgCamera = document.getElementById("imgCamera");
         const nameCamera = document.getElementById("nameCamera");
         const descriptionCamera = document.getElementById('descriptionCamera');
@@ -46,11 +45,9 @@ ready(function() {
         const addBasket = document.getElementById("addBasketButton");
         
         let basket = JSON.parse(localStorage.getItem('basket'));
-        console.log(basket);
         if (basket === null){
             basket = [];
         }
-        //localStorage.setItem('orders', monobjet_json);
         
         addBasket.addEventListener("click", () => {
             //addToBasket();
@@ -71,12 +68,9 @@ ready(function() {
             },false);   
     };
 
-    
-
     if(productId !== "") {
         fetch("http://localhost:3000/api/cameras/"+productId)
             .then(res => {
-                console.log(productId);
                 if(res.ok){
                     res.json().then(data => {
                         createProduct(data); 
