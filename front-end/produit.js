@@ -33,7 +33,7 @@ ready(function() {
         descriptionCamera.textContent = data.description;
         priceCamera.textContent = data.price;
 
-        //Ajouter formulaire proposant le choix des objectis pour chaque caméra
+        //Ajouter formulaire proposant le choix des objectifs pour chaque caméra
         data.lenses.forEach(lense => {
             const option = document.createElement('option');
             option.textContent = lense;
@@ -51,7 +51,10 @@ ready(function() {
         
         addBasket.addEventListener("click", () => {
             //addToBasket();
-            basket.push(data);
+            const toto = document.getElementById("number");
+            for (let i = 1; i <= toto.value; i++){
+                basket.push(data);
+            };
             localStorage.setItem('basket', JSON.stringify(basket));
             basket = JSON.parse(localStorage.getItem('basket'));
             countBasket();

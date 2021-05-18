@@ -55,4 +55,5 @@ function clearBasket (){
     localStorage.clear();
 }, false);
 }
-            
+      
+
