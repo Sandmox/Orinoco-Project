@@ -17,7 +17,7 @@ displayTotalPrice();
 // Afficher l'identifiant de commande 
 
 function orderNumber () {
-    const alphabet = "abcdefghijklmnopqrstuvwxyz"
+    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     const randomCharacter = alphabet[Math.floor(Math.random() * alphabet.length)]
     const randomNumber = Math.floor(Math.random() * 100) + 1;
     const randomCharacter2 = alphabet[Math.floor(Math.random() * alphabet.length)]

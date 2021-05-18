@@ -45,6 +45,7 @@ function retrieveCameras () {
         nameCam.textContent = element.name;
         priceCam.textContent = element.price;
         camerasWrapper.appendChild(cameraWrapper);
+        
     });
 }
 

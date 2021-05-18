@@ -50,7 +50,6 @@ ready(function() {
         }
         
         addBasket.addEventListener("click", () => {
-            //addToBasket();
             const toto = document.getElementById("number");
             for (let i = 1; i <= toto.value; i++){
                 basket.push(data);
@@ -58,16 +57,6 @@ ready(function() {
             localStorage.setItem('basket', JSON.stringify(basket));
             basket = JSON.parse(localStorage.getItem('basket'));
             countBasket();
-            /*localStorage.setItem(JSON.stringify("camera"), JSON.stringify(data));
-            let monobjet = localStorage.getItem('\"camera\"');
-            console.log(localStorage);
-            console.log(monobjet);
-            let monObjet = JSON.parse(monobjet);
-            console.log(monObjet);
-            console.log(monObjet.price);*/
-
-            //numberOfProducts.textContent = x;
-            //x++;
             },false);   
     };
 
