@@ -50,8 +50,8 @@ ready(function() {
         }
         
         addBasket.addEventListener("click", () => {
-            const toto = document.getElementById("number");
-            for (let i = 1; i <= toto.value; i++){
+            const addCameras = document.getElementById("number");
+            for (let i = 1; i <= addCameras.value; i++){
                 basket.push(data);
             };
             localStorage.setItem('basket', JSON.stringify(basket));
@@ -67,6 +67,7 @@ ready(function() {
                     res.json().then(data => {
                         createProduct(data); 
                         countBasket();
+                        console.log(data);
                     })
                 } else {
                     console.log("ERREUR");

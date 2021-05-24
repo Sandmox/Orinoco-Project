@@ -27,6 +27,7 @@ fetch("http://localhost:3000/api/cameras")
             createCameras(cameras);
             getBasket();
             countBasket();
+            console.log(data);
         })
     } else {
         console.log("ERREUR");

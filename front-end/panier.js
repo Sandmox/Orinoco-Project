@@ -18,6 +18,7 @@ fetch("http://localhost:3000/api/cameras")
             clearBasket();      
             retrieveCameras();
             displayTotalPrice();
+            console.log(data);
         })
     } else {
         console.log("ERREUR");

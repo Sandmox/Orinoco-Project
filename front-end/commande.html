@@ -22,6 +22,31 @@
     <p>Votre numéro de commande à conserver :</p>
     <p id="orderId"></p>
 
+    <form id="myForm" action="/front-end/commande.html" method="post">
+        <div>
+            <label for="name">Prénom :</label>
+            <input type="text" id="firstName" name="user_surname">
+        </div>
+        <div>
+            <label for="name">Nom :</label>
+            <input type="text" id="lastName" name="user_name">
+        </div>
+        <div>
+            <label for="mail">Adresse :</label>
+            <input type="text" id="address" name="user_adress">
+        </div>
+        <div>
+            <label for="mail">Ville :</label>
+            <input type="text" id="city" name="user_town">
+        </div>
+        <div>
+            <label for="mail">E-mail :</label>
+            <input type="mail" id="email" name="user_mail">
+        </div>
+        <input type="submit" id='submit' value='LOGIN' >
+        
+    </form>
+
     <footer class="footer">
         <ul>
             <li>A propos</li>
