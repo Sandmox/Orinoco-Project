@@ -32,7 +32,8 @@ function retrieveCameras () {
     let monObjet = JSON.parse(monobjet);
     console.log(monObjet);
     console.log(monObjet._id);
-    let newTabId = [];   
+    
+    /*let newTabId = [];   
     
     monObjet.forEach(element => {
         newTabId.push(element._id);
@@ -62,7 +63,7 @@ function retrieveCameras () {
         return result;
         }
 
-        find_duplicate_in_array(newTabId);
+        find_duplicate_in_array(newTabId);*/
         
     
     //monObjet.forEach(element => {
@@ -78,17 +79,14 @@ function retrieveCameras () {
     //var unique = newTabId.filter(onlyUnique);
     //console.log(unique);
     
-  
-
 const key = 'name';
 
 const arrayUniqueByKey = [...new Map(monObjet.map(item =>
   [item[key], item])).values()];
 
 console.log(arrayUniqueByKey);
-    
-        
-    arrayUniqueByKey.forEach(element => {
+          
+arrayUniqueByKey.forEach(element => {
         const camerasWrapper = document.getElementById("cameras2");
         var ghost2 = document.getElementById("ghost2");
         var cameraWrapper = ghost2.cloneNode(true);
@@ -114,14 +112,7 @@ function clearBasket (){
 }, false);
 }
       
-/*const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const productOrder = urlParams.get('/order');
 
-var form = new FormData(document.getElementById('testForm'));
-fetch("/order", {
-  method: "POST",
-  body: form
-});*/
+
 
 

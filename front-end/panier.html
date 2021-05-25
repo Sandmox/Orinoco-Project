@@ -34,36 +34,39 @@
     <h2>Prix total : </h2>
     <h3 id="totalPrice"></h3>
 
-    <form id="testForm" action="/front-end/commande.js" method="post">
+    <form id="myForm" action="/front-end/commande.html" method="post">
         <div>
             <label for="name">Prénom :</label>
-            <input type="text" id="name" name="user_name">
+            <input type="text" id="firstName" name="user_surname">
         </div>
         <div>
             <label for="name">Nom :</label>
-            <input type="text" id="mail" name="user_mail">
+            <input type="text" id="lastName" name="user_name">
         </div>
         <div>
             <label for="mail">Adresse :</label>
-            <input type="email" id="mail" name="user_mail">
+            <input type="text" id="address" name="user_adress">
         </div>
         <div>
             <label for="mail">Ville :</label>
-            <input type="text" id="mail" name="user_mail">
+            <input type="text" id="city" name="user_town">
         </div>
         <div>
             <label for="mail">E-mail :</label>
-            <input type="mail" id="mail" name="user_mail">
+            <input type="mail" id="email" name="user_mail">
         </div>
+        <input type="submit" id='submit' value='LOGIN' >
         
     </form>
 
     <a href="index.html"><button id="emptyBasket" >Vider mon panier</button></a>
-    <a href="commande.html"><button>Payer</button></a>
+    <a href="./commande.html"><button id="payButton">Payer</button></a>
 
-
+    
     <script src="./basket.js"></script>
     <script src="./panier.js"></script>
+    
+
     
 
     <footer class="footer">

@@ -14,24 +14,7 @@ function displayTotalPrice () {
 
 displayTotalPrice();
 
-// Afficher l'identifiant de commande 
-
-/*function orderNumber () {
-    const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    const randomCharacter = alphabet[Math.floor(Math.random() * alphabet.length)]
-    const randomNumber = Math.floor(Math.random() * 100) + 1;
-    const randomCharacter2 = alphabet[Math.floor(Math.random() * alphabet.length)]
-    const randomNumber2 = Math.floor(Math.random() * 1000) + 1;
-    const orderId = document.getElementById("orderId");
-    orderId.textContent = randomCharacter + "-" + randomNumber + "-" + randomCharacter2 + "-" + randomNumber2;
-};
-
-orderNumber();*/
-const testSubmit = document.getElementById('submit');
-const myForm = document.getElementById("myForm");
-console.log(myForm);
-console.log(testSubmit);
-
+/*
 //----------------------------------UTILISATION DE LA METHODE POST-----------------------------//
 
 // Création de l'objet "contact"
@@ -57,9 +40,9 @@ monObjet.forEach(element => {
 
 console.log(products);
 
-// Mise en place de la requête POST
+// Exécution de la requête POST
 let toSend = {contact, products}
-console.log(toSend)
+console.log(toSend);
 
 fetch("http://localhost:3000/api/cameras/order", {
   method: "POST",
@@ -74,31 +57,7 @@ fetch("http://localhost:3000/api/cameras/order", {
 })
 .then(function(value){
     console.log(value)
+    return value;
 }) ;
 
-
-/*function send(e) {
-    e.preventDefault();
-    fetch("http://localhost:3000/api/cameras/order", {
-      method: "POST",
-      headers: {
-        'Accept': 'application/json', 
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({value: document.getElementById("value").value})
-    })
-    .then(function(res) {
-      if (res.ok) {
-        return res.json();
-      }
-    })
-    .then(function(value) {
-        document
-          .getElementById("result")
-          .innerText = value.postData.text;
-    });
-  }
-  
-  document
-    .getElementById("testForm")
-    .addEventListener("submit", send);*/
+*/
