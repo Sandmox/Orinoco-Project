@@ -31,19 +31,17 @@ function retrieveCameras () {
     let monobjet = localStorage.getItem('basket');
     let monObjet = JSON.parse(monobjet);
     console.log(monObjet);
-    console.log(monObjet._id);
     
-    /*let newTabId = [];   
+    let newTabId = [];   
     
     monObjet.forEach(element => {
-        newTabId.push(element._id);
+       newTabId.push(element._id);
     });
     console.log(newTabId);
 
     function find_duplicate_in_array(array){
         const count = {}
         const result = []
-        
         array.forEach(item => {
             if (count[item]) {
                count[item] +=1
@@ -51,33 +49,45 @@ function retrieveCameras () {
             }
             count[item] = 1
         })
-        
         for (let prop in count){
             if (count[prop] >=2){
                 result.push(prop)
             }
         }
-        
         console.log(count)
         console.log(Object.values(count));
+        arrayOfQuantities = Object.values(count);
+        
+
+        arrayOfQuantities.forEach(element =>{
+            console.log(element);
+            const camerasWrapper = document.getElementById("cameras2");
+            var ghost2 = document.getElementById("ghost2");
+            var cameraWrapper = ghost2.cloneNode(true);
+            cameraWrapper.style = null;
+            var quantity = cameraWrapper.getElementsByTagName('p').item(1);
+            quantity.textContent = element;
+            camerasWrapper.appendChild(cameraWrapper);
+            }) 
+
         return result;
         }
-
-        find_duplicate_in_array(newTabId);*/
+    
+    find_duplicate_in_array(newTabId);
         
     
-    //monObjet.forEach(element => {
-      //  if (newTabId.includes(element._id)){};
+    /*monObjet.forEach(element => {
+        if (newTabId.includes(element._id)){};
         
-    //});
-    //console.log(newTabId);
+    });
+    console.log(newTabId);
 
-    //function onlyUnique(value, index, self) {
-        //return self.indexOf(value) === index;
-      //}
+    function onlyUnique(value, index, self) {
+        return self.indexOf(value) === index;
+      }
       
-    //var unique = newTabId.filter(onlyUnique);
-    //console.log(unique);
+    var unique = newTabId.filter(onlyUnique);
+    console.log(unique);*/
     
 const key = 'name';
 
@@ -87,7 +97,7 @@ const arrayUniqueByKey = [...new Map(monObjet.map(item =>
 console.log(arrayUniqueByKey);
           
 arrayUniqueByKey.forEach(element => {
-        const camerasWrapper = document.getElementById("cameras2");
+        const camerasWrapper = document.getElementById("cameras3");
         var ghost2 = document.getElementById("ghost2");
         var cameraWrapper = ghost2.cloneNode(true);
         cameraWrapper.style = null;
@@ -95,13 +105,14 @@ arrayUniqueByKey.forEach(element => {
         var nameCam = cameraWrapper.getElementsByTagName('h2').item(0);
         var priceCam = cameraWrapper.getElementsByTagName('p').item(0);
         var link = cameraWrapper.getElementsByTagName('a').item(0);
-        img.setAttribute("src", element.imageUrl);
+        //img.setAttribute("src", element.imageUrl);
         var productId = element._id;
         link.setAttribute("href", "./produit.html?id="+productId);
         nameCam.textContent = element.name;
         priceCam.textContent = element.price;
         camerasWrapper.appendChild(cameraWrapper);   
     });
+
 };
 
 // Vider le panier
