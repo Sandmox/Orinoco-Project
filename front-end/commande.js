@@ -9,10 +9,16 @@ function displayTotalPrice () {
     });
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     let priceToPay = arrayPrice.reduce(reducer);
-    totalPrice.textContent = priceToPay ;
+    totalPrice.textContent = priceToPay;
 }
 
 displayTotalPrice();
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const orderId = urlParams.get('id');
+
+console.log(orderId);
 
 /*
 //----------------------------------UTILISATION DE LA METHODE POST-----------------------------//
