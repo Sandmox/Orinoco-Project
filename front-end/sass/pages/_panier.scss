@@ -1,0 +1,62 @@
+#camerasContent{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding-left: 25px;
+};
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+};
+
+button{
+    cursor: pointer;
+}
+
+#cameras2{
+    #ghost2{
+        margin-bottom: 65px;
+    }
+};
+
+#totalPriceTitle, #totalPrice, #myForm, #buttonsForm {
+    padding-left: 25px;
+};
+
+#buttonsForm{
+    margin-top: 10px;
+    margin-bottom: 25px;
+};
+
+#lastName{
+    padding-left: 2px;
+    margin-left: 18px;
+};
+
+#address{
+    padding-left: 1px;
+    margin-left: -1px;
+};
+
+#city{
+    margin-left: 19px;
+    padding-left: 2px;
+};
+
+#email{
+    margin-left: 7px;
+    padding-left: 1px;
+};
+
+#priceContent{
+    display: flex;
+};
+
+#totalPrice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};

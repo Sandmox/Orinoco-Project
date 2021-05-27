@@ -14,7 +14,7 @@ const createCameras = (cameras) => {
         var productId = camera._id;
         link.setAttribute("href", "./produit.html?id="+productId);
         nameCam.textContent = camera.name;
-        priceCam.textContent = camera.price;
+        priceCam.textContent = camera.price + " €";
         camerasWrapper.appendChild(cameraWrapper);
     });
 };

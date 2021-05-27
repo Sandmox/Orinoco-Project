@@ -109,7 +109,7 @@ arrayUniqueByKey.forEach(element => {
         var productId = element._id;
         link.setAttribute("href", "./produit.html?id="+productId);
         nameCam.textContent = element.name;
-        priceCam.textContent = element.price;
+        priceCam.textContent = element.price + " €";
         camerasWrapper.appendChild(cameraWrapper);   
     });
 

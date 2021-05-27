@@ -1,17 +1,18 @@
 header{
     background-color: #f3e9f1;
-    height: 150px;
+    height: 155px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    border-style: solid;
     img{
         width: 300px;
     }
     p{
         font-size: 32px;
-        font-style: italic;
-        color: #915cf6;
+        font-style: oblique;
+        color: black;
         margin-top: 45px;
     }
     i{

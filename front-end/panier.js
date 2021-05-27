@@ -6,7 +6,7 @@ function displayTotalPrice() {
         arrayPrice.push(cam.price);
     });
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    let priceToPay = arrayPrice.reduce(reducer);
+    let priceToPay = arrayPrice.reduce(reducer) + " €";
     totalPrice.textContent = priceToPay;
 }
 

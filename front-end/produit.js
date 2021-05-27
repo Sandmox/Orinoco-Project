@@ -31,7 +31,7 @@ ready(function() {
         imgCamera.src = data.imageUrl;
         nameCamera.textContent = data.name;
         descriptionCamera.textContent = data.description;
-        priceCamera.textContent = data.price;
+        priceCamera.textContent = data.price + " €";
 
         //Ajouter formulaire proposant le choix des objectifs pour chaque caméra
         data.lenses.forEach(lense => {
