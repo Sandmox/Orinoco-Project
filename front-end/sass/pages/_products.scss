@@ -1,0 +1,42 @@
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p{
+        font-size: 18px
+    };
+    label{
+        font-size: 18px;
+    }
+};
+
+#contentPrice{
+    display: flex;
+};
+
+#contentQuantity{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+};
+
+#buttonsWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    margin-top: 20px;
+};
+
+.buttons{
+    font-size: 18px;
+    background-color: #8a2be285;
+    :hover{
+        background-color: lighten($color: #8a2be285, $amount: 50%)
+    }
+};
+
+#priceCamera{
+    margin-left: 5px;
+}

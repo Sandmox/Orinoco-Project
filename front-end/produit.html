@@ -23,23 +23,27 @@
         <img id="imgCamera">
         <h2 id="nameCamera"></h2>
         <p id="descriptionCamera"></p>
+        <div>
         <label>Objectifs:</label>
-            <select id="wrapperLences">
-                
+            <select id="wrapperLences">  
             </select>
-        <p>Prix unitaire :</p>
-        <p id="priceCamera"></p>
+        </div>
+        <div id="contentPrice">    
+            <p>Prix unitaire :</p>
+            <p id="priceCamera"></p>
+        </div>
     </div>
     
-    <div>
-    <label>Quantité :</label>
-    <input id="number" type="number" value="1" min="1">
+    <div id="contentQuantity">
+        <label>Quantité :</label>
+        <input id="number" type="number" value="1" min="1">
     </div>
 
-    <a  id="addBasketButton"><button>Ajouter au panier</button></a>
-    <a href="./panier.html" id="goToBasketButton"><button>Finaliser mes achats</button></a>
-    <a href="./index.html"><button>Poursuivre ma commande</button></a>
-    
+    <div id="buttonsWrapper">
+        <a  id="addBasketButton"><button class="buttons">Ajouter au panier</button></a>
+        <a href="./index.html"><button class="buttons">Poursuivre ma commande</button></a>
+        <a href="./panier.html" id="goToBasketButton"><button class="buttons">Finaliser mes achats</button></a>
+    </div>
     
     
     <script src="./basket.js"></script>
