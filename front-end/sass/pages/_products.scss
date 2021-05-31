@@ -22,19 +22,19 @@
     font-size: 18px;
 };
 
-#buttonsWrapper{
+.buttonsWrapper{
     display: flex;
     flex-direction: row;
     justify-content:space-around;
     margin-top: 20px;
+    a:hover{
+        background-color: lighten($color:#8a2be285 , $amount: 0.3);
+        };
 };
 
 .buttons{
     font-size: 18px;
     background-color: #8a2be285;
-    :hover{
-        background-color: lighten($color: #8a2be285, $amount: 50%)
-    }
 };
 
 #priceCamera{

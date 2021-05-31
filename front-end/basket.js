@@ -66,7 +66,7 @@ function retrieveCameras () {
             var cameraWrapper = ghost2.cloneNode(true);
             cameraWrapper.style = null;
             var quantity = cameraWrapper.getElementsByTagName('p').item(1);
-            quantity.textContent = element;
+            quantity.textContent = "Nombre d'exemplaires: " + element;
             camerasWrapper.appendChild(cameraWrapper);
             }) 
 
