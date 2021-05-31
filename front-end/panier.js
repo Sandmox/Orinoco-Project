@@ -38,8 +38,6 @@ class ContactInfo {
     }
 };
 
-// Création de l'array "products"
-
 
 // Exécution de la requête POST
 
@@ -69,8 +67,6 @@ function send() {
         })
         .catch(function (error) { })
 };
-
-//send();
 
 let payButton = document.getElementById('payButton');
 payButton.addEventListener("click", (e) => {

@@ -39,7 +39,7 @@ function retrieveCameras () {
     });
     console.log(newTabId);
 
-    function find_duplicate_in_array(array){
+    function findDuplicateInArray(array){
         const count = {}
         const result = []
         array.forEach(item => {
@@ -66,14 +66,14 @@ function retrieveCameras () {
             var cameraWrapper = ghost2.cloneNode(true);
             cameraWrapper.style = null;
             var quantity = cameraWrapper.getElementsByTagName('p').item(1);
-            quantity.textContent = "Nombre d'exemplaires: " + element;
+            quantity.textContent = "x" + element;
             camerasWrapper.appendChild(cameraWrapper);
             }) 
 
         return result;
         }
     
-    find_duplicate_in_array(newTabId);
+    findDuplicateInArray(newTabId);
         
     
     /*monObjet.forEach(element => {

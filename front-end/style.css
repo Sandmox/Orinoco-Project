@@ -106,7 +106,7 @@ button {
 }
 
 #buttonsForm {
-  margin-top: 10px;
+  margin-top: 25px;
   margin-bottom: 25px;
 }
 
@@ -174,10 +174,14 @@ h1 {
 }
 #wrapper label {
   font-size: 18px;
+  font-weight: bold;
 }
 
 #contentPrice {
   display: flex;
+}
+#contentPrice p {
+  font-weight: bold;
 }
 
 #contentQuantity {
@@ -186,6 +190,7 @@ h1 {
   align-items: center;
   justify-content: center;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .buttonsWrapper {
@@ -221,6 +226,7 @@ h1 {
 
 #orderId {
   color: red;
+  margin-bottom: 100px;
 }
 
 #orderNumber {
