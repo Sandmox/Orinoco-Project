@@ -71,6 +71,7 @@ function send() {
 let payButton = document.getElementById('payButton');
 payButton.addEventListener("click", (e) => {
     e.preventDefault();
-    send()
+    send();
+    //ajouter un clearBasket
 }
 );

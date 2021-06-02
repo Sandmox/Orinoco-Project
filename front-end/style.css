@@ -250,4 +250,10 @@ h1 {
   text-decoration: underline;
 }
 
+#backHome {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 /*# sourceMappingURL=style.css.map */

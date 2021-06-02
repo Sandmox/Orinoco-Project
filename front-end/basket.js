@@ -17,6 +17,40 @@ function countBasket(){
     }
 };
 
+function findDuplicateInArray(array){
+    const count = {}
+    const result = []
+    array.forEach(item => {
+        if (count[item]) {
+           count[item] +=1
+           return
+        }
+        count[item] = 1
+    })
+    for (let prop in count){
+        if (count[prop] >=2){
+            result.push(prop)
+        }
+    }
+    console.log(count)
+    console.log(Object.values(count));
+    arrayOfQuantities = Object.values(count);
+    
+
+    arrayOfQuantities.forEach(element =>{
+        console.log(element);
+        const camerasWrapper = document.getElementById("cameras2");
+        var ghost2 = document.getElementById("ghost2");
+        var cameraWrapper = ghost2.cloneNode(true);
+        cameraWrapper.style = null;
+        var quantity = cameraWrapper.getElementsByTagName('p').item(1);
+        quantity.textContent = "x" + element;
+        camerasWrapper.appendChild(cameraWrapper);
+        }) 
+
+    return result;
+    }
+
 function retrieveCameras () {
     let monobjet = localStorage.getItem('basket');
     let monObjet = JSON.parse(monobjet);
@@ -29,39 +63,7 @@ function retrieveCameras () {
     });
     console.log(newTabId);
 
-    function findDuplicateInArray(array){
-        const count = {}
-        const result = []
-        array.forEach(item => {
-            if (count[item]) {
-               count[item] +=1
-               return
-            }
-            count[item] = 1
-        })
-        for (let prop in count){
-            if (count[prop] >=2){
-                result.push(prop)
-            }
-        }
-        console.log(count)
-        console.log(Object.values(count));
-        arrayOfQuantities = Object.values(count);
-        
-
-        arrayOfQuantities.forEach(element =>{
-            console.log(element);
-            const camerasWrapper = document.getElementById("cameras2");
-            var ghost2 = document.getElementById("ghost2");
-            var cameraWrapper = ghost2.cloneNode(true);
-            cameraWrapper.style = null;
-            var quantity = cameraWrapper.getElementsByTagName('p').item(1);
-            quantity.textContent = "x" + element;
-            camerasWrapper.appendChild(cameraWrapper);
-            }) 
-
-        return result;
-        }
+    
     
     findDuplicateInArray(newTabId);
     

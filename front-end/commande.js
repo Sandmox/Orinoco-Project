@@ -26,3 +26,8 @@ function getOrderId () {
 };
 
 getOrderId();
+
+const backHome = document.getElementById("backHome");
+backHome.addEventListener("click", (e) => {
+    localStorage.clear();
+});
