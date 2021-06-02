@@ -7,16 +7,6 @@ function getBasket(){
         }
 };
 
-/*function addToBasket(){
-    let basket = JSON.parse(localStorage.getItem('basket'));
-    if (basket === null){
-        basket = [];
-    }
-    basket.push(data);
-    localStorage.setItem('basket', JSON.stringify(basket));
-    basket = JSON.parse(localStorage.getItem('basket'));
-};*/
-
 function countBasket(){
     const numberOfProducts = document.getElementsByTagName("i").item(0);
     let basket = JSON.parse(localStorage.getItem('basket'));
@@ -74,20 +64,6 @@ function retrieveCameras () {
         }
     
     findDuplicateInArray(newTabId);
-        
-    
-    /*monObjet.forEach(element => {
-        if (newTabId.includes(element._id)){};
-        
-    });
-    console.log(newTabId);
-
-    function onlyUnique(value, index, self) {
-        return self.indexOf(value) === index;
-      }
-      
-    var unique = newTabId.filter(onlyUnique);
-    console.log(unique);*/
     
 const key = 'name';
 

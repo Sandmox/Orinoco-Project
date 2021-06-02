@@ -14,11 +14,15 @@ function displayTotalPrice () {
 
 displayTotalPrice();
 
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const orderId = urlParams.get('id');
+// Afficher le numéro de commande
 
-console.log(orderId);
+function getOrderId () {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const orderId = urlParams.get('id');
+    console.log(orderId);
+    const displayOrderId = document.getElementById('orderId');
+    displayOrderId.textContent = orderId;
+};
 
-const displayOrderId = document.getElementById('orderId');
-displayOrderId.textContent = orderId;
+getOrderId();
