@@ -18,7 +18,6 @@ fetch("http://localhost:3000/api/cameras")
                 clearBasket();
                 retrieveCameras();
                 displayTotalPrice();
-                console.log(data);
             })
         } else {
             console.log("ERREUR");
@@ -62,7 +61,6 @@ function send() {
             if (res.ok) { return res.json() }
         })
         .then(function (value) {
-            console.log(value)
             window.location.href = 'commande.html?id='+value.orderId;
         })
         .catch(function (error) { })
@@ -75,8 +73,5 @@ payButton.addEventListener("click", (e) => {
         window.alert("Merci de compléter le formulaire");
     } else
     send();
-    //ajouter un clearBasket
 }
 );
-
-console.log(document.getElementsByClassName("input").value);

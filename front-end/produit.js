@@ -60,6 +60,7 @@ ready(function() {
             },false);   
     };
 
+
     if(productId !== "") {
         fetch("http://localhost:3000/api/cameras/"+productId)
             .then(res => {
@@ -67,7 +68,6 @@ ready(function() {
                     res.json().then(data => {
                         createProduct(data); 
                         countBasket();
-                        console.log(data);
                     })
                 } else {
                     console.log("ERREUR");

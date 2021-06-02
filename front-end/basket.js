@@ -32,13 +32,10 @@ function findDuplicateInArray(array){
             result.push(prop)
         }
     }
-    console.log(count)
-    console.log(Object.values(count));
     arrayOfQuantities = Object.values(count);
     
 
     arrayOfQuantities.forEach(element =>{
-        console.log(element);
         const camerasWrapper = document.getElementById("cameras2");
         var ghost2 = document.getElementById("ghost2");
         var cameraWrapper = ghost2.cloneNode(true);
@@ -54,25 +51,19 @@ function findDuplicateInArray(array){
 function retrieveCameras () {
     let monobjet = localStorage.getItem('basket');
     let monObjet = JSON.parse(monobjet);
-    console.log(monObjet);
     
     let newTabId = [];   
     
     monObjet.forEach(element => {
        newTabId.push(element._id);
     });
-    console.log(newTabId);
 
-    
-    
     findDuplicateInArray(newTabId);
     
 const key = 'name';
 
 const arrayUniqueByKey = [...new Map(monObjet.map(item =>
   [item[key], item])).values()];
-
-console.log(arrayUniqueByKey);
           
 arrayUniqueByKey.forEach(element => {
         const camerasWrapper = document.getElementById("cameras3");
@@ -83,7 +74,6 @@ arrayUniqueByKey.forEach(element => {
         var nameCam = cameraWrapper.getElementsByTagName('h2').item(0);
         var priceCam = cameraWrapper.getElementsByTagName('p').item(0);
         var link = cameraWrapper.getElementsByTagName('a').item(0);
-        //img.setAttribute("src", element.imageUrl);
         var productId = element._id;
         link.setAttribute("href", "./produit.html?id="+productId);
         nameCam.textContent = element.name;
