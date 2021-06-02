@@ -31,3 +31,4 @@ const backHome = document.getElementById("backHome");
 backHome.addEventListener("click", (e) => {
     localStorage.clear();
 });
+

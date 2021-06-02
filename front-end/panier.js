@@ -71,7 +71,12 @@ function send() {
 let payButton = document.getElementById('payButton');
 payButton.addEventListener("click", (e) => {
     e.preventDefault();
+    if (document.getElementById("firstName").value == "" || document.getElementById("lastName").value == "" || document.getElementById("address").value == "" || document.getElementById("city").value == "" || document.getElementById("email").value == "") {
+        window.alert("Merci de compléter le formulaire");
+    } else
     send();
     //ajouter un clearBasket
 }
 );
+
+console.log(document.getElementsByClassName("input").value);
